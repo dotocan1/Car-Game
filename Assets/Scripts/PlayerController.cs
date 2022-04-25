@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private float speed = 10.0f;
-    private float turnSpeed;
+    private float turnSpeed = 5.0f;
     private float horizontalInput;
     private float forwardInput;
 
@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
         // Turn vehicle
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
-
-
 
     }
 }
